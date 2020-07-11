@@ -121,7 +121,9 @@ GameManager.prototype.move = function (direction) {
 
           // Update the score
           self.score += merged.value;
-
+          
+          // The mighty 6765 tile
+          if (merged.value === 6765) self.won = true;
         } else {
           self.moveTile(tile, positions.farthest);
         }
